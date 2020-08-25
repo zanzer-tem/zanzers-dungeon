@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    font-family: 'Merriweather', 'Roboto';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+	height: 100%;
+}
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.container {
+    min-height:100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;    
+    grid-template-rows: auto 1fr auto;  
+    grid-template-areas: "header header header"
+                        ". tool-menu ."
+                        ". footer .";
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+}
+
+.book {
+
+	width: 100%;
+	text-align: center;
+}
+
+.book::after {
+    content: "\1F4D6";
+    font-size: 100px;
+    display: block;
+}
+
+
+
+.tool-menu{
+    grid-area: tool-menu;
+    text-align: center;
+    row-gap: 15px;
+}
+
+.tool-menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tool-menu ul .tool{
+    border-radius: 25px;
+    border: 1px solid #999;
+    padding: 20px;
+    margin:15px;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+
