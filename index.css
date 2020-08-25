@@ -14,11 +14,11 @@ code {
 .container {
     min-height:100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;    
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;    
     grid-template-rows: auto 1fr auto;  
-    grid-template-areas: "header header header"
-                        ". tool-menu ."
-                        ". footer .";
+    grid-template-areas: "header header header header header"
+                        ". . tool-menu . ."
+                        ". . footer . .";
 }
 
 header{
@@ -32,7 +32,6 @@ footer{
 }
 
 .book {
-
 	width: 100%;
 	text-align: center;
 }
@@ -48,21 +47,29 @@ footer{
 .tool-menu{
     grid-area: tool-menu;
     text-align: center;
-    row-gap: 15px;
+
+    
 }
 
 .tool-menu ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 275px 275px 275px; 
+    column-gap: 10px;
+    row-gap: 15px;
 }
 
+
 .tool-menu ul .tool{
-    border-radius: 25px;
+    border-radius: 5px;
     border: 1px solid #999;
     padding: 20px;
     margin:15px;
     box-shadow: 5px 10px 8px #888888;
+
 }
 
 
