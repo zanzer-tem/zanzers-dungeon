@@ -78,7 +78,7 @@ footer{
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #000;
     background-color: black;
-    background-image: linear-gradient(to bottom right, maroon, black);
+    background-image: linear-gradient(to bottom right, #666, black);
 }
 
 
