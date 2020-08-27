@@ -15,7 +15,7 @@ code {
     min-height:100%;
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;    
-    grid-template-rows: auto 1fr auto;  
+    grid-template-rows: auto 1fr 80px;  
     grid-template-areas: "header header header header header"
                         ". . tool-menu . ."
                         ". . footer . .";
@@ -29,6 +29,7 @@ header{
 footer{
     grid-area: footer;
     text-align: center;
+    margin-top:25px;
 }
 
 .book {
@@ -42,13 +43,20 @@ footer{
     display: block;
 }
 
+.dice {
+	width: 100%;
+	text-align: center;
+}
 
+.dice::after {
+    content: "\1F3B2";
+    font-size: 14pt;
+    display: block;
+}
 
 .tool-menu{
     grid-area: tool-menu;
-    text-align: center;
-
-    
+    text-align: center;  
 }
 
 .tool-menu ul{
@@ -56,21 +64,26 @@ footer{
     margin: 0;
     padding: 0;
     display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-   grid-template-rows: 275px 275px;
-  /* This is better for small screens, once min() is better supported */
-  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
-  grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    grid-auto-rows:  250px;
+    /* This is better for small screens, once min() is better supported */
+    /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+
     column-gap: 10px;
-    row-gap: 15px;
+    row-gap: 25px;
+    height:100%;
 }
 
+
+.tool-menu ul a {
+    text-decoration:  none;
+}
 
 .tool-menu ul .tool{
     border-radius: 5px;
     border: 1px solid #999;
-    padding: 20px;
-    margin:15px;
+    padding: 0px;
+    padding-top:15px;
     box-shadow: 5px 10px 8px #888888;
     font-size:16pt;
     color: #fff;
@@ -79,7 +92,9 @@ footer{
     -webkit-text-stroke-color: #000;
     background-color: black;
     background-image: linear-gradient(to bottom right, #666, black);
+    height:100%;
 }
+
 
 
 
