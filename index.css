@@ -54,6 +54,53 @@ footer{
     display: block;
 }
 
+.mask {
+	width: 100%;
+	text-align: center;
+}
+
+.mask::after {
+    content: "\1F3AD";
+    font-size: 100px;
+    display: block;
+}
+
+.card {
+	width: 100%;
+	text-align: center;
+}
+
+.card::after {
+    content: "\1F0CF";
+    font-size: 100px;
+    display: block;
+}
+
+.door {
+	width: 100%;
+	text-align: center;
+}
+
+.door::after {
+    content: "\1F6AA";
+    font-size: 100px;
+    display: block;
+}
+
+
+.castle {
+	width: 100%;
+	text-align: center;
+}
+
+.castle::after {
+    content: "\1F3F0";
+    font-size: 100px;
+    display: block;
+}
+
+
+
 .tool-menu{
     grid-area: tool-menu;
     text-align: center;  
@@ -84,6 +131,8 @@ footer{
     border: 1px solid #999;
     padding: 0px;
     padding-top:15px;
+    padding-left:15px;
+    padding-right: 15px;
     box-shadow: 5px 10px 8px #888888;
     font-size:16pt;
     color: #fff;
